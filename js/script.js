@@ -38,7 +38,7 @@ newUrl = (elem) => {
                             ${result.Search[i].Year},
                             ${result.Search[i].Type}
                         </div>
-                        <button onclick="return details(this);" type="button" class="item__button btn btn-link" data-details="http://www.omdbapi.com/?apikey=c2a0850f&i=${result.Search[i].imdbID}&plot=full">Details...</button>
+                        <button onclick="return details(this);" type="button" class="item__button btn btn-link" data-details="//www.omdbapi.com/?apikey=c2a0850f&i=${result.Search[i].imdbID}&plot=full">Details...</button>
                     </div>
                 `;
         }
@@ -52,7 +52,7 @@ newUrl = (elem) => {
             list += `<ul class="pagination pagination-lg">`;
 
             for (let y = 1; y <= pages; y++) {
-                list += `<li class="page-item"><a class="page-link" onclick="return newUrl(this);" href="javascript:void(0);" data-elem="http://www.omdbapi.com/?apikey=c2a0850f&s=${name}&type=${type}&page=${y}">${y}</a></li>`;
+                list += `<li class="page-item"><a class="page-link" onclick="return newUrl(this);" href="javascript:void(0);" data-elem="//www.omdbapi.com/?apikey=c2a0850f&s=${name}&type=${type}&page=${y}">${y}</a></li>`;
             }
 
             list += `</ul>`;
@@ -71,7 +71,7 @@ $('form').submit(function () {
     let type = $('#inputType').val();
     let page = 1;
 
-    url = `http://www.omdbapi.com/?apikey=c2a0850f&s=${name}&type=${type}&page=${page}`;
+    url = `//www.omdbapi.com/?apikey=c2a0850f&s=${name}&type=${type}&page=${page}`;
 
     getData(url).then(function (result) {
         if (result.Response != 'False') {
@@ -88,7 +88,7 @@ $('form').submit(function () {
                             ${result.Search[i].Year},
                             ${result.Search[i].Type}
                         </div>
-                        <button onclick="return details(this);" type="button" class="item__button btn btn-link" data-details="http://www.omdbapi.com/?apikey=c2a0850f&i=${result.Search[i].imdbID}&plot=full">Details...</button>
+                        <button onclick="return details(this);" type="button" class="item__button btn btn-link" data-details="//www.omdbapi.com/?apikey=c2a0850f&i=${result.Search[i].imdbID}&plot=full">Details...</button>
                     </div>
                 `;
             }
@@ -106,7 +106,7 @@ $('form').submit(function () {
 
                 for (let y = 2; y <= pages; y++) {
                     list += `<li class="page-item">
-                                <a class="page-link" onclick="return newUrl(this);" href="javascript:void(0);" data-elem="http://www.omdbapi.com/?apikey=c2a0850f&s=${name}&type=${type}&page=${y}">${y}</a>
+                                <a class="page-link" onclick="return newUrl(this);" href="javascript:void(0);" data-elem="//www.omdbapi.com/?apikey=c2a0850f&s=${name}&type=${type}&page=${y}">${y}</a>
                             </li>`;
                 }
                 list += `</ul>`;

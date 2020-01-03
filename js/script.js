@@ -29,7 +29,7 @@ newUrl = (elem) => {
         let list = ``;
 
         for (let i = 0; i < 10; i++) {
-            if (result.Search[i].Poster == 'N/A' || !result.Search[i].Poster) result.Search[i].Poster = '../img/no-poster.png';
+            if (result.Search[i].Poster == 'N/A' || !result.Search[i].Poster) result.Search[i].Poster = '/img/no-poster.png';
             list += `
                     <div class="item">
                         <img class="item__img" src="${result.Search[i].Poster}" alt="Movie image">
